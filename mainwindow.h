@@ -40,22 +40,31 @@ private slots:
 
     void on_connectToServer_triggered();
 
+    void on_devInfo_triggered();
+
+    void on_programInfo_triggered();
+
 signals:
     void dataReceived();
 
 private:
     DoubleListModel *concentrationModel;
     DoubleListModel *levelModel;
+    DoubleListModel *consumptionModel;
 
     QVector<double> concentrationVector;
     QVector<double> levelVector;
+    QVector<double> consumptionVector;
+
     QVector<double> coefficientsConcentration;
     QVector<double> coefficientsLevel;
 
     QTcpSocket *socket;
     QByteArray Data;
 
+    void connectSocket();
     void sendDataToServer();
+    void refreshModels();
 
     Ui::MainWindow *ui;
 };

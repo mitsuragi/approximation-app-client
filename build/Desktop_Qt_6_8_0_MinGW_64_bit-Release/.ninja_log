@@ -1,0 +1,13 @@
+# ninja log v6
+50	3836	7566591705799356	client_autogen/timestamp	7d13ff3b14c7ec67
+50	3836	7566591705799356	client_autogen/mocs_compilation.cpp	7d13ff3b14c7ec67
+50	3836	7566591705799356	D:/QtProjects/client-server-approximation/client/build/Desktop_Qt_6_8_0_MinGW_64_bit-Release/client_autogen/timestamp	7d13ff3b14c7ec67
+50	3836	7566591705799356	D:/QtProjects/client-server-approximation/client/build/Desktop_Qt_6_8_0_MinGW_64_bit-Release/client_autogen/mocs_compilation.cpp	7d13ff3b14c7ec67
+3868	9179	7566591707607300	CMakeFiles/client.dir/utils.cpp.obj	dbd9b80b7aa7be16
+3860	11266	7566591707527285	CMakeFiles/client.dir/doublelistmodel.cpp.obj	a0a5984d16efaa73
+3864	11743	7566591707564635	CMakeFiles/client.dir/addnumdialog.cpp.obj	340dae3dfb250a91
+3853	19682	7566591707454927	CMakeFiles/client.dir/main.cpp.obj	288370576dbf6802
+3849	26029	7566591707405058	CMakeFiles/client.dir/client_autogen/mocs_compilation.cpp.obj	852ec36140b9dd0c
+9179	26379	7566591760713700	CMakeFiles/client.dir/chartdialog.cpp.obj	48fe1706c20f0a25
+3857	26581	7566591707486113	CMakeFiles/client.dir/mainwindow.cpp.obj	ca507996c11e4b1e
+26582	27506	7566591934736381	client.exe	6405f7cbee714801

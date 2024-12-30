@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Добавить данные</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -19,7 +19,7 @@
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>Выберите параметр и введите его значение</string>
+        <string>Введите значения для расхода, концентрации и отклонения уровня</string>
        </property>
        <property name="wordWrap">
         <bool>true</bool>
@@ -27,10 +27,34 @@
       </widget>
      </item>
      <item>
-      <widget class="QComboBox" name="parameterBox"/>
+      <widget class="QLabel" name="consumLabel">
+       <property name="text">
+        <string>Расход</string>
+       </property>
+      </widget>
      </item>
      <item>
-      <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
+      <widget class="QDoubleSpinBox" name="consumSpinBox"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="concLabel">
+       <property name="text">
+        <string>Концентрация</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="concSpinBox"/>
+     </item>
+     <item>
+      <widget class="QLabel" name="levelLabel">
+       <property name="text">
+        <string>Отклонение уровня</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDoubleSpinBox" name="levelSpinBox"/>
      </item>
      <item>
       <spacer name="verticalSpacer">

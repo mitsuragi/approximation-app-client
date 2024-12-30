@@ -1295,8 +1295,7 @@ client_autogen/timestamp: \
 	D:/QtProjects/client-server-approximation/client/main.cpp \
 	D:/QtProjects/client-server-approximation/client/mainwindow.cpp \
 	D:/QtProjects/client-server-approximation/client/mainwindow.h \
-	D:/QtProjects/client-server-approximation/client/utils.cpp \
-	D:/QtProjects/client-server-approximation/client/utils.h \
+	D:/QtProjects/client-server-approximation/client/resources.qrc \
 	D:/QtProjects/client-server-approximation/client/addnumdialog.ui \
 	D:/QtProjects/client-server-approximation/client/chartdialog.ui \
 	D:/QtProjects/client-server-approximation/client/mainwindow.ui \

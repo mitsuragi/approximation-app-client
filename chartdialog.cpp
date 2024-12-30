@@ -1,11 +1,12 @@
 #include "chartdialog.h"
 #include "ui_chartdialog.h"
 
-QSplineSeries* createSeries(QVector<double> x, QVector<double>xCoef = {});
-double calculatePoint(int x, QVector<double> xCoef);
+QSplineSeries* createSeries(QVector<double> x, QVector<double> y, QVector<double>xCoef = {});
+double calculatePoint(double x, QVector<double> xCoef);
 
 chartDialog::chartDialog(const QVector<double>& _concentrationVector,
                          const QVector<double>& _levelVector,
+                         const QVector<double>& _consumptionVector,
                          const QVector<double>& _coefficientsConcentration,
                          const QVector<double>& _coefficientsLevel,
                          QWidget *parent)
@@ -16,12 +17,14 @@ chartDialog::chartDialog(const QVector<double>& _concentrationVector,
 
     concentrationVector = _concentrationVector;
     levelVector = _levelVector;
+    consumptionVector = _consumptionVector;
     coefficientsConcentration = _coefficientsConcentration;
     coefficientsLevel = _coefficientsLevel;
 
     QValueAxis *axisX = new QValueAxis;
-    axisX->setRange(0, concentrationVector.size() - 1);
-    axisX->setTickCount(concentrationVector.size());
+    int range = consumptionVector.last();
+    axisX->setRange(0, range);
+    axisX->setTickCount(consumptionVector.size());
     axisX->setLabelFormat("%i");
 
     QChart *chart = initChart();
@@ -49,21 +52,21 @@ chartDialog::~chartDialog()
 }
 
 QChart* chartDialog::initChart() {
-    QSplineSeries *concSeries = createSeries(concentrationVector);
+    QSplineSeries *concSeries = createSeries(consumptionVector, concentrationVector);
     concSeries->setName("Концентрация(Точки)");
     concSeries->setColor(QColor::fromRgb(0, 255, 0));
     concSeries->setPointsVisible(true);
 
-    QSplineSeries *levelSeries = createSeries(levelVector);
+    QSplineSeries *levelSeries = createSeries(consumptionVector, levelVector);
     levelSeries->setName("Отклонение уровня(Точки)");
     levelSeries->setColor(QColor::fromRgb(1, 1, 1));
     levelSeries->setPointsVisible(true);
 
-    QSplineSeries *concCoefSeries = createSeries(concentrationVector, coefficientsConcentration);
+    QSplineSeries *concCoefSeries = createSeries(consumptionVector, concentrationVector, coefficientsConcentration);
     concCoefSeries->setName("Концентрация");
     concCoefSeries->setColor(QColor::fromRgb(255, 0, 0));
 
-    QSplineSeries *levelCoefSeries = createSeries(levelVector, coefficientsLevel);
+    QSplineSeries *levelCoefSeries = createSeries(consumptionVector, levelVector, coefficientsLevel);
     levelCoefSeries->setName("Отклонение уровня");
     levelCoefSeries->setColor(QColor::fromRgb(0, 0, 255));
 
@@ -76,22 +79,22 @@ QChart* chartDialog::initChart() {
     return chart;
 }
 
-QSplineSeries* createSeries(QVector<double> x, QVector<double>xCoef) {
+QSplineSeries* createSeries(QVector<double> x, QVector<double> y, QVector<double>xCoef) {
     QSplineSeries *series = new QSplineSeries;
     if (xCoef.isEmpty()) {
         for (int i = 0; i < x.size(); i++) {
-            series->append(i, x[i]);
+            series->append(x[i], y[i]);
         }
     }
     else {
         for (int i = 0; i < x.size(); i++) {
-            series->append(i, calculatePoint(i, xCoef));
+            series->append(x[i], calculatePoint(x[i], xCoef));
         }
     }
 
     return series;
 }
 
-double calculatePoint(int x, QVector<double> xCoef) {
+double calculatePoint(double x, QVector<double> xCoef) {
     return xCoef[0] * x + xCoef[1];
 }

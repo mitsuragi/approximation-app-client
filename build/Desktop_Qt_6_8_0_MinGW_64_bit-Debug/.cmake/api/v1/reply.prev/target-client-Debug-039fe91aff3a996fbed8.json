@@ -79,13 +79,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 68,
+				"line" : 70,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 51,
+				"line" : 53,
 				"parent" : 0
 			},
 			{
@@ -459,18 +459,19 @@
 				2,
 				6,
 				8,
-				11
+				11,
+				18
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "client_autogen::@6890427a1f51a3e7e1df"
+			"id" : "client_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "client_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "client_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "client::@6890427a1f51a3e7e1df",
@@ -615,7 +616,8 @@
 				2,
 				6,
 				8,
-				11
+				11,
+				18
 			]
 		},
 		{
@@ -626,8 +628,9 @@
 				5,
 				7,
 				10,
-				12,
-				13
+				14,
+				15,
+				16
 			]
 		},
 		{
@@ -636,14 +639,17 @@
 			[
 				4,
 				9,
-				14
+				12,
+				13,
+				17
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				15
+				19,
+				20
 			]
 		}
 	],
@@ -707,14 +713,24 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "utils.h",
+			"path" : "chartdialog.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
-			"path" : "utils.cpp",
+			"path" : "chartdialog.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "chartdialog.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "resources.qrc",
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
@@ -731,13 +747,32 @@
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/client_autogen/include/ui_chartdialog.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/client_autogen/timestamp",
 			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/client_autogen/EWIEGA46WW/qrc_resources.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/client_autogen/timestamp.rule",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/client_autogen/EWIEGA46WW/qrc_resources.cpp.rule",
 			"sourceGroupIndex" : 3
 		}
 	],

@@ -320,7 +320,8 @@
 		"D:/Qt/6.8.0/mingw_64/lib/cmake/Qt6Charts/Qt6ChartsTargets-relwithdebinfo.cmake",
 		"D:/Qt/6.8.0/mingw_64/lib/cmake/Qt6Charts/Qt6ChartsAdditionalTargetInfo.cmake",
 		"D:/Qt/6.8.0/mingw_64/lib/cmake/Qt6Charts/Qt6ChartsVersionlessAliasTargets.cmake",
-		"D:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/GNUInstallDirs.cmake"
+		"D:/Qt/Tools/CMake_64/share/cmake-3.29/Modules/GNUInstallDirs.cmake",
+		"D:/QtProjects/client-server-approximation/client/resources.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "D:/QtProjects/client-server-approximation/client",
 	"CROSS_CONFIG" : false,
@@ -350,12 +351,6 @@
 			"D:/QtProjects/client-server-approximation/client/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
-			null
-		],
-		[
-			"D:/QtProjects/client-server-approximation/client/utils.h",
-			"MU",
-			"EWIEGA46WW/moc_utils.cpp",
 			null
 		]
 	],
@@ -460,11 +455,6 @@
 		],
 		[
 			"D:/QtProjects/client-server-approximation/client/mainwindow.cpp",
-			"MU",
-			null
-		],
-		[
-			"D:/QtProjects/client-server-approximation/client/utils.cpp",
 			"MU",
 			null
 		]

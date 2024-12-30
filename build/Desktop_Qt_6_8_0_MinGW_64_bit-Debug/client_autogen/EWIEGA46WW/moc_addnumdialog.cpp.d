@@ -1,6 +1,5 @@
 D:/QtProjects/client-server-approximation/client/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/client_autogen/EWIEGA46WW/moc_addnumdialog.cpp: D:/QtProjects/client-server-approximation/client/addnumdialog.h \
   D:/QtProjects/client-server-approximation/client/build/Desktop_Qt_6_8_0_MinGW_64_bit-Debug/client_autogen/moc_predefs.h \
-  D:/Qt/6.8.0/mingw_64/include/QtCore/QStringList \
   D:/Qt/6.8.0/mingw_64/include/QtCore/q20functional.h \
   D:/Qt/6.8.0/mingw_64/include/QtCore/q20iterator.h \
   D:/Qt/6.8.0/mingw_64/include/QtCore/q20memory.h \
@@ -358,5 +357,4 @@ D:/QtProjects/client-server-approximation/client/build/Desktop_Qt_6_8_0_MinGW_64
   D:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/sys/types.h \
   D:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   D:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
-  D:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  D:/QtProjects/client-server-approximation/client/utils.h
+  D:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h

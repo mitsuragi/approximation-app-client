@@ -15,6 +15,7 @@ class chartDialog : public QDialog
 public:
     chartDialog(const QVector<double>& _concentrationVector,
                 const QVector<double>& _levelVector,
+                const QVector<double>& _consumptionVector,
                 const QVector<double>& _coefficientsConcentration,
                 const QVector<double>& _coefficientsLevel,
                 QWidget *parent = nullptr);
@@ -24,6 +25,7 @@ private:
 
     QVector<double> concentrationVector;
     QVector<double> levelVector;
+    QVector<double> consumptionVector;
     QVector<double> coefficientsConcentration;
     QVector<double> coefficientsLevel;
 

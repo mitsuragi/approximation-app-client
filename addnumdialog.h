@@ -3,7 +3,6 @@
 
 #include <QDialog>
 #include <string>
-#include "utils.h"
 
 namespace Ui {
 class addNumDialog;
@@ -17,8 +16,9 @@ public:
     explicit addNumDialog(QWidget *parent = nullptr);
     ~addNumDialog();
 
-    parameter getParameterValue();
-    double getNumValue();
+    double getConsumptionValue();
+    double getConcentrationValue();
+    double getLevelValue();
 
 private:
     Ui::addNumDialog *ui;

@@ -17,14 +17,43 @@
    </sizepolicy>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Главное окно</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
-     <layout class="QVBoxLayout" name="concentrationLayout">
+     <layout class="QVBoxLayout" name="consumptionLayout">
+      <property name="spacing">
+       <number>10</number>
+      </property>
       <property name="leftMargin">
-       <number>0</number>
+       <number>3</number>
+      </property>
+      <property name="rightMargin">
+       <number>1</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="consumptionLabel">
+        <property name="text">
+         <string>Расход, кг/с</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QListView" name="consumptionListView"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="concentrationLayout">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="leftMargin">
+       <number>7</number>
       </property>
       <property name="topMargin">
        <number>0</number>
@@ -47,6 +76,51 @@
       </item>
       <item>
        <widget class="QListView" name="concentrationListView"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="levelLayout" stretch="0,0">
+      <property name="spacing">
+       <number>10</number>
+      </property>
+      <property name="sizeConstraint">
+       <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
+      </property>
+      <property name="leftMargin">
+       <number>7</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>1</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="levelLabel">
+        <property name="layoutDirection">
+         <enum>Qt::LayoutDirection::LeftToRight</enum>
+        </property>
+        <property name="text">
+         <string>Отклонение уровня, мм</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QListView" name="levelListView">
+        <property name="layoutDirection">
+         <enum>Qt::LayoutDirection::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -108,51 +182,6 @@
       </item>
      </layout>
     </item>
-    <item>
-     <layout class="QVBoxLayout" name="levelLayout" stretch="0,0">
-      <property name="spacing">
-       <number>5</number>
-      </property>
-      <property name="sizeConstraint">
-       <enum>QLayout::SizeConstraint::SetDefaultConstraint</enum>
-      </property>
-      <property name="leftMargin">
-       <number>4</number>
-      </property>
-      <property name="topMargin">
-       <number>0</number>
-      </property>
-      <property name="rightMargin">
-       <number>0</number>
-      </property>
-      <property name="bottomMargin">
-       <number>0</number>
-      </property>
-      <item>
-       <widget class="QLabel" name="levelLabel">
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="text">
-         <string>Отклонение уровня, мм</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignmentFlag::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QListView" name="levelListView">
-        <property name="layoutDirection">
-         <enum>Qt::LayoutDirection::LeftToRight</enum>
-        </property>
-        <property name="autoFillBackground">
-         <bool>false</bool>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -175,7 +204,8 @@
     <property name="title">
      <string>Помощь</string>
     </property>
-    <addaction name="information"/>
+    <addaction name="devInfo"/>
+    <addaction name="programInfo"/>
    </widget>
    <widget class="QMenu" name="serverMenu">
     <property name="title">
@@ -203,9 +233,14 @@
     <string>Подключиться к серверу</string>
    </property>
   </action>
-  <action name="information">
+  <action name="devInfo">
    <property name="text">
-    <string>Справка</string>
+    <string>Информация о разработчике</string>
+   </property>
+  </action>
+  <action name="programInfo">
+   <property name="text">
+    <string>Информация о программе</string>
    </property>
   </action>
  </widget>
